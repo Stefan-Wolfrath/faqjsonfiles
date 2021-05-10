@@ -1,0 +1,27 @@
+{
+    "name": "faqstefan/faqjsonfiles",
+    "type": "typo3-cms-extension",
+    "description": "Faq from json files",
+    "authors": [
+        {
+            "name": "Stefan Wolfrath",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Faqstefan\\Faqjsonfiles\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Faqstefan\\Faqjsonfiles\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3-ter/faqjsonfiles": "self.version"
+    }
+}

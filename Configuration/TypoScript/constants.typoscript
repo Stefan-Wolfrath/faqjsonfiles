@@ -1,0 +1,15 @@
+
+plugin.tx_faqjsonfiles {
+    view {
+        # cat=plugin.tx_faqjsonfiles_faqjsonfiles/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:faqjsonfiles/Resources/Private/Templates/
+        # cat=plugin.tx_faqjsonfiles_faqjsonfiles/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:faqjsonfiles/Resources/Private/Partials/
+        # cat=plugin.tx_faqjsonfiles_faqjsonfiles/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:faqjsonfiles/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_faqjsonfiles_faqjsonfiles//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

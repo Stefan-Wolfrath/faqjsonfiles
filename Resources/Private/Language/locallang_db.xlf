@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:faqjsonfiles/Resources/Private/Language/locallang_db" date="2021-05-06T10:50:20Z" product-name="faqjsonfiles">
+		<header/>
+		<body>
+			<trans-unit id="tx_faqjsonfiles_domain_model_faqjson" resname="tx_faqjsonfiles_domain_model_faqjson">
+				<source>Faq Json</source>
+			</trans-unit>
+			<trans-unit id="tx_faqjsonfiles_domain_model_faqjson.title" resname="tx_faqjsonfiles_domain_model_faqjson.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_faqjsonfiles_domain_model_faqjson.text" resname="tx_faqjsonfiles_domain_model_faqjson.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_faqjsonfiles_faqjsonfiles.name" resname="tx_faqjsonfiles_faqjsonfiles.name">
+				<source>faq from json files</source>
+			</trans-unit>
+			<trans-unit id="tx_faqjsonfiles_faqjsonfiles.description" resname="tx_faqjsonfiles_faqjsonfiles.description">
+				<source></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

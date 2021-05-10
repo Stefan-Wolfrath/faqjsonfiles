@@ -1,0 +1,235 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>FAQ</h1>
+
+    <f:flashMessages />
+
+    <f:render partial="Payment" />
+<div id="accordion">
+    <div class="faq" id="c{data.uid}">
+
+            <f:if condition="{payment.title}">
+                <h2>{payment.title}</h2>
+                <f:for each="{payment.content}" as="data_item" iteration="data_iterator">
+                    <div class="row">
+
+                        <!-- QUESTION -->
+                        <div class="col-12 col-md-5 p-0" id="heading_{data_iterator.index}">
+                            <div class="faq-question collapsed" data-toggle="collapse"
+                                data-target="#collapse_{data_iterator.index}" aria-expanded="true"
+                                aria-controls="collapse_{data_iterator.index}">
+
+                                <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                        class="col-2 icomoon-icon-plus faq-icon"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- ANSWER -->
+                        <div id="collapse_{data_iterator.index}" class="col-12 col-md-7 collapse"
+                            aria-labelledby="heading_{data_iterator.index}" data-parent="#accordion">
+                            <div class="faq-answer">
+                                <f:if condition="{data_item.text.0}">
+                                    <p>{data_item.text.0 -> f:format.html()}</p>
+                                </f:if>
+                            </div>
+                        </div>
+
+                    </div>
+                </f:for>
+            </f:if>
+
+        <f:if condition="{deadline.title}">
+            <h2>{deadline.title}</h2>
+            <f:for each="{deadline.content}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_2_{data_iterator.index+10}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_2_{data_iterator.index+10}" aria-expanded="true"
+                            aria-controls="collapse_2_{data_iterator.index+10}">
+
+                            <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_2_{data_iterator.index+10}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_2_{data_iterator.index+10}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text.0}">
+                                <p>{data_item.text.0 -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+
+        <f:if condition="{fees.title}">
+            <h2>{fees.title}</h2>
+            <f:for each="{fees.content}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_3_{data_iterator.index+20}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_3_{data_iterator.index+20}" aria-expanded="true"
+                            aria-controls="collapse_3_{data_iterator.index+20}">
+
+                            <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_3_{data_iterator.index+20}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_3_{data_iterator.index+20}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text.0}">
+                                <p>{data_item.text.0 -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+
+        <f:if condition="{pawn_ticket.title}">
+            <h2>{pawn_ticket.title}</h2>
+            <f:for each="{pawn_ticket.content}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_4_{data_iterator.index+30}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_4_{data_iterator.index+30}" aria-expanded="true"
+                            aria-controls="collapse_4_{data_iterator.index+30}">
+
+                            <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_4_{data_iterator.index+30}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_4_{data_iterator.index+30}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text.0}">
+                                <p>{data_item.text.0 -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+
+        <f:if condition="{process.title}">
+            <h2>{process.title}</h2>
+            <f:for each="{process.content}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_6_{data_iterator.index+50}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_6_{data_iterator.index+50}" aria-expanded="true"
+                            aria-controls="collapse_6_{data_iterator.index+50}">
+
+                            <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_6_{data_iterator.index+50}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_6_{data_iterator.index+50}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text.0}">
+                                <p>{data_item.text.0 -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+
+        <f:if condition="{technical_problems.title}">
+            <h2>{technical_problems.title}</h2>
+            <f:for each="{technical_problems.content}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_5_{data_iterator.index+40}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_5_{data_iterator.index+40}" aria-expanded="true"
+                            aria-controls="collapse_5_{data_iterator.index+40}">
+
+                            <div class="h5 row"><span class="col-10">{data_item.headline}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_5_{data_iterator.index+40}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_5_{data_iterator.index+40}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text.0}">
+                                <p>{data_item.text.0 -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+
+        <f:if condition="{faqJsons}">
+            <h2>Sonstige Fragen und Antworten</h2>
+            <f:for each="{faqJsons}" as="data_item" iteration="data_iterator">
+                <div class="row">
+
+                    <!-- QUESTION -->
+                    <div class="col-12 col-md-5 p-0" id="heading_6_{data_iterator.index+50}">
+                        <div class="faq-question collapsed" data-toggle="collapse"
+                            data-target="#collapse_6_{data_iterator.index+50}" aria-expanded="true"
+                            aria-controls="collapse_6_{data_iterator.index+50}">
+                            <f:if condition="{data_item.title}">
+                            <div class="h5 row"><span class="col-10">{data_item.title}</span><i
+                                    class="col-2 icomoon-icon-plus faq-icon"></i></div>
+                                </f:if>
+                        </div>
+                    </div>
+
+                    <!-- ANSWER -->
+                    <div id="collapse_6_{data_iterator.index+50}" class="col-12 col-md-7 collapse"
+                        aria-labelledby="heading_6_{data_iterator.index+50}" data-parent="#accordion">
+                        <div class="faq-answer">
+                            <f:if condition="{data_item.text}">
+                                <p>{data_item.text -> f:format.html()}</p>
+                            </f:if>
+                        </div>
+                    </div>
+
+                </div>
+            </f:for>
+        </f:if>
+    </div>
+
+
+</div>
+
+</f:section>
+
+</html>
